@@ -12,7 +12,7 @@ __license__ = "GPL"
 __version__ = "1.0.1"
 __maintainer__ = "Gonzalez Neila, Samuel"
 __email__ = ""
-__status__ = "Production"
+__status__ = "Development"
 
 # date (YYYY-MM-DD): 2023-02-04
 
