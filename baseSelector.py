@@ -1,4 +1,8 @@
 from resultOfCalculations import *
+from featuredTools import check_if_binary
+from featuredTools import check_if_octal
+from featuredTools import check_if_hex
+
 
 def show_options():
     print(f'What kind of number do you want to convert?')
@@ -11,23 +15,54 @@ def number_to_convert(selection, retries):
     if retries < 3:
         try:
             if selection == "1":
-                num = int(input(f'Enter the decimal you want to convert: '))
-                conversions_from_dec(num)
+                num_d = str(int(input(f'Enter the decimal you want to convert: ')))
+                conversions_from_dec(num_d)
             elif selection == "2":
-                num = int(input(f'Enter the binary you want to convert: '), 2)
-                conversions_from_bin(num)
+                num_b = str(input(f'Enter the binary you want to convert: '))
+                attempts = 0
+                while not check_if_binary(num_b):
+                    if attempts < 3:
+                       number_to_convert(2, retries)
+                       attempts += 1
+                       num_b = str(input(f'Enter the binary you want to convert: '))
+                    else:
+                        print(f'Something went wrong. Aborting program')
+                        retries = 3
+                        break
+                conversions_from_bin(num_b)
             elif selection == "3":
-                num = int(input(f'Enter the octal you want to convert: '), 8)
-                conversions_from_oct(num)
+                num_o = str(input(f'Enter the octal you want to convert: '))
+                attempts = 0
+                while not check_if_octal(num_o):
+                    if attempts < 3:
+                        number_to_convert(3, retries)
+                        attempts += 1
+                        num_o = str(input(f'Enter the octal you want to convert: '))
+                    else:
+                        print(f'Something went wrong. Aborting program')
+                        retries = 3
+                        break
+                conversions_from_oct(num_o)
             elif selection == "4":
-                num = int(input(f'Enter the hexadecimal you want to convert: '), 16)
-                conversions_from_hex(num)
+                num_h = str(input(f'Enter the hexadecimal you want to convert: '))
+                attempts = 0
+                while not check_if_hex(num_h):
+                    if attempts < 3:
+                        number_to_convert(4, retries)
+                        attempts += 1
+                        num_h = str(input(f'Enter the hexadecimal you want to convert: '))
+                    else:
+                        print(f'Something went wrong. Aborting program')
+                        retries = 3
+                        break
+                conversions_from_hex(num_h)
         except Exception as excp:
             print(f'Something went wrong. Error catched: {excp}')
             retries+=1
             number_to_convert(selection, retries)
     else:
         print(f'Something went wrong. Aborting program')
+
 
 def option_selected(option):
     flag = 0

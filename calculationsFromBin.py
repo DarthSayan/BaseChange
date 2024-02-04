@@ -21,7 +21,7 @@ def binary_to_octal(num):
     elif len(str(num))%3 == 2:
         bin_string = "0"
 
-    bin_string = bin_string + str(num)
+    bin_string = bin_string + num
     octal_string = ""
 
     i=0
@@ -41,7 +41,6 @@ def binary_to_decimal(num):
     scale = len(bin_string)-1
     num_dec = 0
     for i in range (len(bin_string)):
-        print(bin_string[i])
         if bin_string[i] == "1":
             num_dec = num_dec + (pow(2,scale))
         scale -=1

@@ -3,8 +3,9 @@ from featuredTools import reverse_string
 """
     Function to switch a number from base 10 to base 2
 """
-def decimal_to_binary(num, bin_num):
+def decimal_to_binary(num):
     bin_string = ""
+    num = int(num)
     if num <= 1:
         return str(num)
     else:
@@ -66,10 +67,3 @@ def hexa_to_binary(num):
 
     return binary_string
 
-
-result=hexa_to_binary("a")
-print(result)
-result=octal_to_binary(255)
-print(result)
-result=decimal_to_binary(10,"")
-print(result)
