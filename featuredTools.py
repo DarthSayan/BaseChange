@@ -1,7 +1,7 @@
 """
-# Function to reorder a string of characters in reverse order
-# (from the end to the beginning)
-# by reversing the order of the characters.
+    #   Function to reorder a string of characters in reverse order
+    #   (from the end to the beginning)
+    #   by reversing the order of the characters.
 """
 def reverse_string(chain):
     reversed_chain = ""
@@ -13,9 +13,9 @@ def reverse_string(chain):
         return reversed_chain
 
 """
-# Function to check if a string given by the user
-# can be a binary number,
-# i.e. only consists of 1s and 0s.
+    #   Function to check if a string given by the user
+    #   can be a binary number,
+    #   i.e. only consists of 1s and 0s.
 """
 def check_if_binary(num):
     num = str(num)
@@ -27,9 +27,9 @@ def check_if_binary(num):
     return flag
 
 """
-# Function to check if a string given by the user
-# can be an octal number,
-# i.e. only consists of characters from 0 to 7.
+    #   Function to check if a string given by the user
+    #   can be an octal number,
+    #   i.e. only consists of characters from 0 to 7.
 """
 def check_if_octal(num):
     num = str(num)
@@ -41,9 +41,9 @@ def check_if_octal(num):
     return flag
 
 """
-# Function to check if a string given by the user
-# can be a hexadecimal number,
-# i.e. only consists of characters from 0 to 7.
+    #   Function to check if a string given by the user
+    #   can be a hexadecimal number,
+    #   i.e. only consists of characters from 0 to 9 and a/A to f/F.
 """
 def check_if_hex(num):
     num = str(num)

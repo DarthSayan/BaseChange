@@ -20,11 +20,20 @@ from baseSelector import *
 
 
 if __name__ == '__main__':
-    # Show options menu:
-    show_options()
+    exit = False
+    while not exit:
+        # Show options menu:
+        show_options()
 
-    # Ask for tha base of the number to convert
-    option = input('Select one of the above options. ')
-    option_selected(str(option))
+        # Ask for tha base of the number to convert
+        option = input('Select one of the above options. ')
+        option_selected(str(option))
+
+        resp = input(f'Do you want to continue Y/N? ')
+        while resp not in "y,Y,n,N":
+            resp = input(f'Please, just tell me if you still want to use the converter (Y) or not (N). ')
+        if resp == "N" or resp == "n":
+            exit = True
+            print (f'Thank you, bye')
 
 

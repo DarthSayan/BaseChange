@@ -1,5 +1,5 @@
 """
-    Function to switch a number from base 2 to base 8
+    #   Function to switch a number from base 2 to base 8
 """
 
 def binary_to_octal(num):
@@ -33,7 +33,7 @@ def binary_to_octal(num):
 
 
 """
-    Function to switch a number from base 2 to base 8
+    #   Function to switch a number from base 2 to base 8
 """
 
 def binary_to_decimal(num):
@@ -48,7 +48,7 @@ def binary_to_decimal(num):
 
 
 """
-    Function to switch a number from base 2 to base 16
+    #   Function to switch a number from base 2 to base 16
 """
 
 def binary_to_hexa(num):

@@ -1,7 +1,7 @@
 from featuredTools import reverse_string
 
 """
-    Function to switch a number from base 10 to base 2
+    #   Function to switch a number from base 10 to base 2
 """
 def decimal_to_binary(num):
     bin_string = ""
@@ -19,7 +19,7 @@ def decimal_to_binary(num):
     return reverse_string(bin_string)
 
 """
-    Function to switch a number from base 8 to base 2
+    #   Function to switch a number from base 8 to base 2
 """
 def octal_to_binary(num):
     octal_binaries = {
@@ -40,7 +40,7 @@ def octal_to_binary(num):
 
 
 """
-    Function to switch a number from base 16 to base 2
+    #   Function to switch a number from base 16 to base 2
 """
 def hexa_to_binary(num):
     hexa_binaries = {
