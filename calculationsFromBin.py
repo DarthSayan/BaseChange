@@ -33,7 +33,7 @@ def binary_to_octal(num):
 
 
 """
-    #   Function to switch a number from base 2 to base 8
+    #   Function to switch a number from base 2 to base 10
 """
 
 def binary_to_decimal(num):
